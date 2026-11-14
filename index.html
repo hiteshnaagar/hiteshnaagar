@@ -1,54 +1,415 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Hitesh Naagar — Graphic Designer and Motion Designer</title>
- <style>
- * { box-sizing: border-box; }
- body { margin: 0; font-family: Arial, sans-serif; background: #f7f5f0; color: #202020; }
- header, main, footer { max-width: 1000px; margin: auto; padding: 24px; }
- nav { display: flex; justify-content: space-between; gap: 16px; }
- a { color: inherit; }
-.hero { padding: 80px 24px 60px; }
-.hero h1 { font-size: clamp(42px, 8vw, 76px); margin: 12px 0; }
-.hero p,.about { max-width: 620px; line-height: 1.6; }
-.button { display: inline-block; margin-top: 14px; padding: 13px 18px;
- background: #202020; color: white; text-decoration: none; border-radius: 6px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-.card { background: white; padding: 24px; border-radius: 10px; min-height: 150px; }
- h2 { margin-top: 48px; }
- footer { border-top: 1px solid #ddd; margin-top: 40px; }
- </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hitesh Naagar | Graphics Designer & Motion Designer</title>
+
+<meta name="description" content="Hitesh Naagar is a Graphics and Motion Designer creating impactful brand identities, creative visuals and engaging digital experiences.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+header {
+    padding: 25px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+
+.hero {
+    padding: 115px 0 100px;
+}
+
+.tag {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 88px);
+    line-height: 1.05;
+    letter-spacing: -4px;
+    max-width: 900px;
+    margin-bottom: 28px;
+}
+
+.hero h1 span {
+    color: #a58b64;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #666;
+    font-size: 17px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 25px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #a58b64;
+}
+
+/* SECTION */
+
+section {
+    padding: 65px 0;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #a58b64;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    margin: 12px 0 35px;
+}
+
+/* SERVICES */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 35px 28px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #a58b64;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about-content {
+    max-width: 750px;
+    font-size: 19px;
+    color: #666;
+}
+
+.about-content strong {
+    color: #222;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #222;
+    color: white;
+    padding: 65px 45px;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 48px;
+}
+
+.contact p {
+    color: #ccc;
+    max-width: 550px;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact .button {
+    background: #a58b64;
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .contact {
+        padding: 40px 25px;
+    }
+
+    .contact h2 {
+        font-size: 36px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
- <header>
- <nav><strong>Hitesh Naagar</strong><a href="#contact">Contact</a></nav>
- <section class="hero">
- <p>Graphic Designer and Motion Designer</p>
- <h1>Turning Ideas into Memorable Designs.</h1>
- <p>I create impactful logos, distinctive visual identities, and engaging social media designs that help brands and small businesses build a strong and memorable presence.</p>
- <a class="button" href="#work">View My Portfolio</a>
- </section>
- </header>
 
- <main>
- <h2 id="work">Selected work</h2>
- <section class="grid">
- <article class="card"><h3>Brand Identity</h3><p>Brand ke liye logo aur visual style.</p></article>
- <article class="card"><h3>Social Media</h3><p>Instagram posts aur campaign graphics.</p></article>
- <article class="card"><h3>Packaging Design</h3><p>Product packaging ka concept aur design.</p></article>
- </section>
+<div class="container">
 
- <h2>About</h2>
- <p class="about">With 2 years of experience in graphic design, I help brands and businesses transform their ideas into clear, creative, and eye-catching visuals that communicate their message effectively.</p>
+<!-- NAVBAR -->
 
- <h2 id="contact">Let’s work together</h2>
- <p>Email: <a href="mailto:hiteshnaagar202@gmail.com">hiteshnaagar202@gmail.com</a></p>
- <p>WhatsApp: <a href="https://wa.me/918178056745">Let's Connect!</a></p>
- </main>
+<header>
+<nav>
+    <div class="logo">HITESH NAAGAR.</div>
+    <a href="#contact">LET'S TALK ↗</a>
+</nav>
+</header>
 
- <footer>© 2026 Hitesh Naagar</footer>
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="tag">Graphic Designer & Motion Designer</div>
+
+    <h1>
+        Turning Ideas Into
+        <span>Memorable Designs.</span>
+    </h1>
+
+    <p>
+        I help brands and small businesses bring their ideas to life
+        through creative logos, distinctive visual identities and
+        engaging social media designs that make a lasting impression.
+    </p>
+
+    <a href="#work" class="button">Explore My Work ↗</a>
+
+</section>
+
+<!-- WORK / SERVICES -->
+
+<section id="work">
+
+    <div class="section-label">What I Do</div>
+
+    <h2>Creative Solutions,<br>Designed With Purpose.</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>01. Brand Identity</h3>
+            <p>
+                Creating unique logos, brand elements and visual
+                identities that give businesses a distinctive personality.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>02. Social Media Design</h3>
+            <p>
+                Designing eye-catching social media creatives,
+                promotional graphics and digital campaigns.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>03. Packaging Design</h3>
+            <p>
+                Developing creative packaging and label designs
+                that make products stand out.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>04. Motion Design</h3>
+            <p>
+                Bringing ideas to life through engaging motion
+                graphics and creative visual storytelling.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>05. Marketing Materials</h3>
+            <p>
+                Designing professional brochures, flyers,
+                banners and other promotional materials.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>06. Digital Creatives</h3>
+            <p>
+                Creating impactful digital visuals that communicate
+                ideas clearly and capture attention.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-label">A Little About Me</div>
+
+    <h2>Designing Ideas Into Reality.</h2>
+
+    <p class="about-content">
+        I'm <strong>Hitesh Naagar</strong>, a passionate Graphics Designer
+        and Motion Designer with <strong>2 years of experience</strong>.
+        I enjoy transforming creative ideas into clear, meaningful
+        and eye-catching visuals.
+
+        With a strong understanding of design principles, typography
+        and visual communication, I create designs that help brands
+        express their identity and connect with their audience.
+    </p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="contact">
+
+        <div class="section-label">Have a Project in Mind?</div>
+
+        <h2>Let's Create<br>Something Amazing.</h2>
+
+        <p>
+            Have an idea, a brand or a project that needs a creative touch?
+            I'd love to hear about it. Let's connect and create something
+            meaningful together.
+        </p>
+
+        <a href="mailto:hiteshnaagar202@gmail.com" class="button">
+            Get In Touch ↗
+        </a>
+
+        <br><br>
+
+        <p>
+            Email:
+            <a href="mailto:hiteshnaagar202@gmail.com">
+                hiteshnaagar202@gmail.com
+            </a>
+        </p>
+
+        <p>
+            WhatsApp:
+            <a href="https://wa.me/918178056745" target="_blank">
+                Let's Connect ↗
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Hitesh Naagar. All Rights Reserved.</p>
+
+    <p>Designed with Creativity & Passion.</p>
+
+</footer>
+
+</div>
+
 </body>
 </html>
